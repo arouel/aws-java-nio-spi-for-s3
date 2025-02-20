@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="output" path="bin/default"/>
+	<classpathentry output="bin/main" kind="src" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/main" kind="src" path="src/main/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/test" kind="src" path="src/test/java">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/test" kind="src" path="src/test/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/examples" kind="src" path="src/examples/java">
+		<attributes>
+			<attribute name="gradle_scope" value="examples"/>
+			<attribute name="gradle_used_by_scope" value="examples"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/integrationTest" kind="src" path="src/integrationTest/java">
+		<attributes>
+			<attribute name="gradle_scope" value="integrationTest"/>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/integrationTest" kind="src" path="src/integrationTest/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="integrationTest"/>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/"/>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.17/d7da5e7fecb3544b1e32f86dc0ef5d5ecf9f381b/slf4j-api-2.0.17-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.17/d9e58ac9c7779ba3bf8142aff6c830617a7fe60f/slf4j-api-2.0.17.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/s3-transfer-manager/2.31.7/7786ab1c2b435e7a8f4f7531dacf6eb4ff52e9e8/s3-transfer-manager-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/s3-transfer-manager/2.31.7/348660f598d4b27ebed7f8808b5f6deb146751e1/s3-transfer-manager-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/s3/2.31.7/504c9e403fb63f57ff2c43699315c17768493ad4/s3-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/s3/2.31.7/f2b0a87c0f47ae5fe00ceddec8d30dc99442978f/s3-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-xml-protocol/2.31.7/c0cfe365c22d5f1c63842cc9aebdbbb04270b8ec/aws-xml-protocol-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-xml-protocol/2.31.7/29e93a47cd64f1fa38158894344f37599088ab33/aws-xml-protocol-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-query-protocol/2.31.7/81145999f202d2a4e2452a364938e76d5f482a2/aws-query-protocol-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-query-protocol/2.31.7/23f64e6f0ff84fabb9ca1c7ce8911a87023ec1fa/aws-query-protocol-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-core/2.31.7/891b609090a1657fb78405bdbe4191a05b919167/aws-core-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-core/2.31.7/303122cf9f04ade3bffbb82e8ea2e36b7a255530/aws-core-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/auth/2.31.7/56e384f20292e776472ebba8c466646cbe63dcee/auth-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/auth/2.31.7/e86cea1359da5ff15fde952bd6d2efc1de81322e/auth-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/regions/2.31.7/b9c499bf5ab104d81db7e2871f04f651da4a758c/regions-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/regions/2.31.7/2496548663257b64520c0b2f8c8ff487bdd9932a/regions-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/protocol-core/2.31.7/3a3e1f9afd6e2949d494880a3e7441da8a742fbd/protocol-core-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/protocol-core/2.31.7/9c5d2aa6d032367739303aa709a5cc6dd3b6e94b/protocol-core-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sdk-core/2.31.7/5bcc54e9db262cdc9d534517730030cb9359dbe7/sdk-core-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/sdk-core/2.31.7/ebdc5bd40a3ce2d3ef65021481dcb7bf6fb34c20/sdk-core-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/arns/2.31.7/1cdcdfc710eb1b051eaeb5844684784ef74c4285/arns-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/arns/2.31.7/dc81316829c488bf77801858a0589f35f9f7d0f/arns-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/json-utils/2.31.7/83d177288ba9cd14c97dbff95c94eb9a6924426d/json-utils-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/json-utils/2.31.7/53f6ee72c3b9f695544847e6ee7d71c729606227/json-utils-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth/2.31.7/10643e8c21be5c1828576d42a8a32b1f88b2db54/http-auth-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth/2.31.7/1e948b122a8ace204e63d1ba44258d04e5274306/http-auth-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-aws/2.31.7/7e9e507c52636c1ca013a535aaca533342c58984/http-auth-aws-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-aws/2.31.7/b621f6e0672b70fea706867d35c008c5a4592b01/http-auth-aws-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-spi/2.31.7/355e1c3aa3a193739dabcefec649841dbf200a62/http-auth-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-spi/2.31.7/b0959b5ff8daf85b12a76c6dfea7a39d71918750/http-auth-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/netty-nio-client/2.31.7/160d0e27c9a1b0a29f34cb34869e2fc0eb042a94/netty-nio-client-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/netty-nio-client/2.31.7/9b6dde4cfb5e265937553db87871747363f9638b/netty-nio-client-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-client-spi/2.31.7/86954de7c30d7176c3a2cef6d06bd3f7d2c5c49d/http-client-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-client-spi/2.31.7/4c2e46c799f7e79e3b416d5d43a945fc494e1125/http-client-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/crt-core/2.31.7/143cf4ef2e4eba69c2fab5838dbcf7f1e1ca369e/crt-core-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/crt-core/2.31.7/790005f82948bf6568bbbb4edb6b859760dc4e3c/crt-core-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/profiles/2.31.7/29e1b72749476682e622ef2e451835f78fc056fb/profiles-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/profiles/2.31.7/bc94e79a43f0f0f585c955b20eff839ebf59b48e/profiles-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/identity-spi/2.31.7/76f9ebfc6d64ba2e137adfcd409105e5861cd157/identity-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/identity-spi/2.31.7/3dd52b1aeac61cce3c18cd4338111118235fe615/identity-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/checksums/2.31.7/ba036f18f89b0be5908fe6268b432b7b304e4e05/checksums-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/checksums/2.31.7/1e8e4ac4cb1d015f7eef8533803465184c2ab476/checksums-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/retries/2.31.7/2cfb35cb52261f52004df5577de9639a10f5e5e3/retries-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/retries/2.31.7/15af13b93e4b0d30b836be915b811295599e8cb7/retries-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/retries-spi/2.31.7/93029b6b5fd1bd71f91a79952bc7a2dfdb825a77/retries-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/retries-spi/2.31.7/89f465f3907d3aaeb59de7d75d23cd5d72216cb2/retries-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/metrics-spi/2.31.7/93a1cb3f0f46dac145cdb7f967cc80f968a0426c/metrics-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/metrics-spi/2.31.7/ed24cd5d7a6ea6b2d791d7206edbd8ca4ede0ba3/metrics-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/utils/2.31.7/93ef3aaf22f3f1e3ab517e5d454990e80dee8148/utils-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/utils/2.31.7/bd0b6d227a40b2b1327fa14eeab9091e2c017878/utils-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava3/rxjava/3.1.10/112044476dba9f35d8f75dd203cd33e0dcd68a44/rxjava-3.1.10-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava3/rxjava/3.1.10/d980c75b983334eeb9a7ea1a252d044f5e6cdf77/rxjava-3.1.10.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk.crt/aws-crt/0.36.3/5a8136fe6ebe75598fb5c74607148fde2b40768d/aws-crt-0.36.3-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk.crt/aws-crt/0.36.3/6fbcb689ec23983fca067690f29eab3a7e0343cd/aws-crt-0.36.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/3.1.8/352209f02df83046de6ebfd647b22d726ca3a954/caffeine-3.1.8-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/3.1.8/24795585df8afaf70a2cd534786904ea5889c047/caffeine-3.1.8.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/checksums-spi/2.31.7/30abfa193e362fee6d8be8397d96ac10a719186b/checksums-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/checksums-spi/2.31.7/3f5f3342a95fac3b6f360649a91659ba1303b83d/checksums-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/endpoints-spi/2.31.7/67df1a489f5b4847c5f9b3f445765319f4f6053d/endpoints-spi-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/endpoints-spi/2.31.7/e2676afd30400aff68f9c58016b37b3822fe2bc7/endpoints-spi-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-aws-eventstream/2.31.7/d13710ac26c6da182412b3c8dfd6725e845a33e7/http-auth-aws-eventstream-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/http-auth-aws-eventstream/2.31.7/24e09d78c163e31e82ba1b10ef0449a7f324353b/http-auth-aws-eventstream-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/annotations/2.31.7/ab3f45a98c1f21b5c14610ace3e8f7ad4891a6e/annotations-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/annotations/2.31.7/a9363fe3877317c9fea305def8e6987747add7a0/annotations-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/third-party-jackson-core/2.31.7/8db9c82fcffc17bf9b0f2ef63ae69dd6c6d6d72d/third-party-jackson-core-2.31.7-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/third-party-jackson-core/2.31.7/41ae855a969509929791b90ab80c82d230ba65cc/third-party-jackson-core-2.31.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.4/d3cddd3497e618c6d3810ef439f13666f889abe4/reactive-streams-1.0.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.4/3864a1320d97d7b045f729a326e1e077661f31b7/reactive-streams-1.0.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.37.0/9990309889a76e4c6556c18140ce8559b854bae3/checker-qual-3.37.0-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.37.0/ba74746d38026581c12166e164bb3c15e90cc4ea/checker-qual-3.37.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.21.1/68e62df0cf0c3927fa98f6d795543ecbeb919521/error_prone_annotations-2.21.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.21.1/6d9b10773b5237df178a7b3c1b4208df7d0e7f94/error_prone_annotations-2.21.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.eventstream/eventstream/1.0.1/7121512c9d99c6b4c6e7a6a858bb05cb2643d6b3/eventstream-1.0.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/software.amazon.eventstream/eventstream/1.0.1/6ff8649dffc5190366ada897ba8525a836297784/eventstream-1.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.118.Final/7406c8fbe02b6498452a6bbc7dd563d4d60aeea1/netty-codec-http2-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.118.Final/e3c35c0685ec9e84c4f84b79feea7c9d185a08d3/netty-codec-http2-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.118.Final/5d688508c79983d3989cd2fc297501c7fc2beefc/netty-codec-http-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.118.Final/eda08a71294afe78c779b85fd696bc13491507a8/netty-codec-http-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.118.Final/e10de5aaaa4adb0c89d1dc315e573831f3c44c63/netty-handler-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.118.Final/30ebb05b6b0fb071dbfcf713017c4a767a97bb9b/netty-handler-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.118.Final/b856e2e8135c144489767b92b458751a64a8373c/netty-codec-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.118.Final/307f665c08ce57333121de4f460479fc0c3c94d4/netty-codec-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.118.Final/4a4e7f5dc7e365918541029240b761c0816327c9/netty-transport-classes-epoll-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.118.Final/376ce95507066f0e755d97c1c8bcd6c33f657617/netty-transport-classes-epoll-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.118.Final/2897b8d1f24499c88089ec23421753dd7fc1739b/netty-transport-native-unix-common-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.118.Final/9da25a94e6a0edac90da0bc7894e5a54efcb866b/netty-transport-native-unix-common-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.118.Final/b500a89c84eff977737d53c7fabbf5a9e69bf60f/netty-transport-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.118.Final/5a27232e5d08218722d94ca14f0b1b4576e7711c/netty-transport-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.118.Final/2d4785c62bb7b405eb1be23c236c562afb9bb5da/netty-buffer-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.118.Final/7022990af1e0d449f9d5322035899745e19735c5/netty-buffer-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.118.Final/a6fa4618f0894177546187c60d6997e1fcbf7edf/netty-resolver-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.118.Final/28c378c19c1779eca1104b400452627f3ebc4aea/netty-resolver-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.118.Final/443f79dfdd99384c8d1cee3864fedd16b2944818/netty-common-4.1.118.Final-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.118.Final/4bb0f9899146484fa89f7b9bc27389d5b8e2ecde/netty-common-4.1.118.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="examples,integrationTest,main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.11.4/2a8cedde21fd75650a78c825f0439ccab44a5217/junit-jupiter-params-5.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.11.4/e4c86fbe2a39c60c6b87260ef7f7e7c1a1906481/junit-jupiter-params-5.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.11.4/c2973c17e3a51473b6827b7a5d3f7167b687f42d/junit-jupiter-api-5.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.11.4/308315b28e667db4091b2ba1f7aa220d1ddadb97/junit-jupiter-api-5.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.11.4/1acfe264ada9081bba59c937a8b0cae0619491bc/junit-platform-commons-1.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.11.4/8898eea3ed0da2641548d602c3e308804f166303/junit-platform-commons-1.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.11.4/4e79ee610aff59d79b5f229252ded392b7d48fd1/junit-jupiter-5.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.11.4/a699f024a4a4706b36bddbeb42d499aff9e09379/junit-jupiter-5.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/junit-jupiter/1.20.6/6bade0e5ec3ff10a0537244e5f33a922eb6d76dc/junit-jupiter-1.20.6-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/junit-jupiter/1.20.6/cb8382b1af0b35856b0601c57cad3f04fb76264c/junit-jupiter-1.20.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/localstack/1.20.6/d9a18e210cf5672abb7f52d09326138791131112/localstack-1.20.6-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/localstack/1.20.6/8184ce9a5c029b1a604f429b65ebe5ba1aabc5d5/localstack-1.20.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/testcontainers/1.20.6/c47d515a171a81707b3055ec6b71266a938fff66/testcontainers-1.20.6-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.testcontainers/testcontainers/1.20.6/7489d32a4c66e9534dc4a7df399b9d3a1d2f76c2/testcontainers-1.20.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.27.3/b22102e6c76782205e2bb8d5a9c900cfeefbcabb/assertj-core-3.27.3-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.27.3/31f5d58a202bd5df4993fb10fa2cffd610c20d6f/assertj-core-3.27.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.16.1/27f901a082bb77275bd3dc32d979850c6815de5a/mockito-junit-jupiter-5.16.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.16.1/703fcc2d4a434fdbfd3ee8805d95d6b6ecfb12b8/mockito-junit-jupiter-5.16.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.16.1/79975370d9326f10af7bd5b75f76b85b3fd612c1/mockito-core-5.16.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.16.1/be8bf71080016b793f32456faff861e2c3a77f62/mockito-core-5.16.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.stefanbirkner/system-lambda/1.2.1/e7dc4b2b04a60a9b1dc8c3fd7b8da383b1ad1db6/system-lambda-1.2.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.stefanbirkner/system-lambda/1.2.1/c3a1b0665a85dca53a90ab560d71db5cbca5f27e/system-lambda-1.2.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/33987872a811fe4d4001ed494b07854822257f42/junit-4.13.2-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-api/3.4.1/e6330fa8a287553abfb2e1a350c4a43213fcedda/docker-java-api-3.4.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-api/3.4.1/64080f723c427dc4e9317c49141ccf1517d9427e/docker-java-api-3.4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-transport-zerodep/3.4.1/50d8056db13f316990949a7661ede2b0964d6ca6/docker-java-transport-zerodep-3.4.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-transport-zerodep/3.4.1/d279e708050376a8cdab8ecb8daa2de7f14138f3/docker-java-transport-zerodep-3.4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/ae9c1aae0033af915cfa75d850eb9d880f21a701/slf4j-api-1.7.36-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.24.0/a369c080d269f41c002855a37042b5f79f65fbfe/commons-compress-1.24.0-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.24.0/b4b1b5a3d9573b2970fddab236102c0a4d27d35e/commons-compress-1.24.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.rnorth.duct-tape/duct-tape/1.0.8/cf14d77239dd2a6fe0e03a2e8f29c6a80373be1/duct-tape-1.0.8-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.rnorth.duct-tape/duct-tape/1.0.8/92edc22a9ab2f3e17c9bf700aaee377d50e8b530/duct-tape-1.0.8.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.15.11/dac99456547f4629e6e15d4045a81d67c438f06f/byte-buddy-1.15.11-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.15.11/f61886478e0f9ee4c21d09574736f0ff45e0a46c/byte-buddy-1.15.11.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/6849b24a46924986ccc1285704ba6e0d9569330c/byte-buddy-agent-1.15.11-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/afb8ff23cffb021c56f333953aebfe6e8818568e/opentest4j-1.3.0-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/e0787a997746ac32639e0bf3cb27af8dce8a3428/apiguardian-api-1.1.2-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value=""/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/17.0.0/c4824e1e82f2783838485a3536db0b8f4d53aa95/annotations-17.0.0-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/17.0.0/8ceead41f4e71821919dbdb7a9847608f1a938cb/annotations-17.0.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.3/a52bf9c42cb6a029577d0d701785a07554675713/jackson-annotations-2.10.3-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.3/f63b3b1da563767d04d2e4d3fc1ae0cdeffebe7/jackson-annotations-2.10.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-transport/3.4.1/fa39cc3d7b5561f439b89a98cc00f4bd7da540c/docker-java-transport-3.4.1-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/com.github.docker-java/docker-java-transport/3.4.1/52914db42fc15423157afaec1e765519e6194716/docker-java-transport-3.4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.13.0/e55ddc56d092866b6d59822f825c253960a6e504/jna-5.13.0-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.13.0/1200e7ebeedbe0d10062093f32925a912020e747/jna-5.13.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.11.4/62890d34f46a222a73690cff58bc6ba477ac1214/junit-jupiter-engine-5.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.11.4/dc10ec209623986a68ea07f67cdc7d2a65a60355/junit-jupiter-engine-5.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.11.4/9e12d99def318784875efc0804bae79bc45c61f8/junit-platform-engine-1.11.4-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.11.4/21f61b123ad6ac8f7e73971bff3a096c8d8e1cd0/junit-platform-engine-1.11.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.5.18/c18967160fa1b855dd90a43d69e7bad0328cf19c/logback-classic-1.5.18-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.5.18/fc371f3fc97a639de2d67947cffb7518ec5e3d40/logback-classic-1.5.18.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/5fef34eeee6816b0ba2170755a8a9db7744990c3/objenesis-3.3-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.5.18/f0838c78e8957d0ea1a6b55a2df250bf2d559d9c/logback-core-1.5.18-sources.jar" kind="lib" path="/Users/andre.rouel@tealium.com/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.5.18/6c0375624f6f36b4e089e2488ba21334a11ef13f/logback-core-1.5.18.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="integrationTest,test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+</classpath>
