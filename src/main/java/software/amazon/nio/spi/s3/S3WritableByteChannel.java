@@ -8,6 +8,7 @@ package software.amazon.nio.spi.s3;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.ClosedChannelException;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.SeekableByteChannel;
 import java.nio.channels.WritableByteChannel;
 import java.nio.file.FileAlreadyExistsException;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeoutException;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
 
-class S3WritableByteChannel implements WritableByteChannel {
+class S3WritableByteChannel implements ReadableByteChannel, WritableByteChannel {
     private final S3Path path;
     private final Path tempFile;
     private final SeekableByteChannel channel;
@@ -109,5 +110,10 @@ class S3WritableByteChannel implements WritableByteChannel {
             throw new ClosedChannelException();
         }
         s3TransferUtil.uploadLocalFile(path, tempFile);
+    }
+
+    @Override
+    public int read(ByteBuffer dst) throws IOException {
+        return channel.read(dst);
     }
 }

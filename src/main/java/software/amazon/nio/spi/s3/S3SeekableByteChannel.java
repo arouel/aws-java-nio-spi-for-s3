@@ -27,6 +27,7 @@ class S3SeekableByteChannel implements SeekableByteChannel {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(S3SeekableByteChannel.class);
 
+    private final Set<? extends OpenOption> options;
     private long position;
     private final S3Path path;
     private final ReadableByteChannel readDelegate;
@@ -44,6 +45,7 @@ class S3SeekableByteChannel implements SeekableByteChannel {
         position = startAt;
         path = s3Path;
         closed = false;
+        this.options = options;
         s3Path.getFileSystem().registerOpenChannel(this);
 
         if (options.contains(StandardOpenOption.WRITE) && options.contains(StandardOpenOption.READ)) {
@@ -85,6 +87,10 @@ class S3SeekableByteChannel implements SeekableByteChannel {
     @Override
     public int read(ByteBuffer dst) throws IOException {
         validateOpen();
+
+        if (options.contains(StandardOpenOption.READ)) {
+            return writeDelegate.read(dst);
+        }
 
         if (readDelegate == null) {
             throw new NonReadableChannelException();
