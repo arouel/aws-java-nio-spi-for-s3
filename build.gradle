@@ -27,7 +27,7 @@ repositories {
 
 group = 'software.amazon.nio.s3'
 archivesBaseName = 'nio-spi-for-s3'
-version = '2.2.0'
+version = '2.2.1-SNAPSHOT'
 
 java {
     withSourcesJar()
