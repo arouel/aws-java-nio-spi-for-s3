@@ -116,9 +116,9 @@ publishing {
     }
 }
 
-signing {
-    sign publishing.publications.maven
-}
+//signing {
+//    sign publishing.publications.maven
+//}
 
 javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
