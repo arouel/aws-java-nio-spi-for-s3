@@ -65,7 +65,6 @@ import software.amazon.awssdk.services.s3.model.BucketAlreadyExistsException;
 import software.amazon.awssdk.services.s3.model.BucketAlreadyOwnedByYouException;
 import software.amazon.awssdk.services.s3.model.ChecksumAlgorithm;
 import software.amazon.awssdk.services.s3.model.CopyObjectRequest;
-import software.amazon.awssdk.services.s3.model.CreateBucketRequest;
 import software.amazon.awssdk.services.s3.model.Delete;
 import software.amazon.awssdk.services.s3.model.DeleteObjectsRequest;
 import software.amazon.awssdk.services.s3.model.HeadObjectRequest;
@@ -176,35 +175,24 @@ public class S3FileSystemProvider extends FileSystemProvider {
         var bucketName = config.getBucketName();
 
         try (var client = new S3ClientProvider(config).configureCrtClient().build()) {
-            var request = CreateBucketRequest.builder().bucket(bucketName);
-            if (envMap.containsKey("acl")) {
-                request.acl(envMap.get("acl").toString());
-            }
-            if (envMap.containsKey("grantFullControl")) {
-                request.grantFullControl(envMap.get("grantFullControl").toString());
-            }
-            if (envMap.containsKey("grantRead")) {
-                request.grantRead(envMap.get("grantRead").toString());
-            }
-            if (envMap.containsKey("grantReadACP")) {
-                request.grantReadACP(envMap.get("grantReadACP").toString());
-            }
-            if (envMap.containsKey("grantWrite")) {
-                request.grantWrite(envMap.get("grantWrite").toString());
-            }
-            if (envMap.containsKey("grantWriteACP")) {
-                request.grantWriteACP(envMap.get("grantWriteACP").toString());
-            }
-            if (envMap.containsKey("locationConstraint")) {
-                request.createBucketConfiguration(confBuilder -> {
-                    String loc = envMap.get("locationConstraint").toString();
-                    if (loc.equals(Region.US_EAST_1.id())) {
-                        loc = null; // us-east-1 is the default (null) location for S3
-                    }
-                    confBuilder.locationConstraint(loc);
-                });
-            }
-            var createBucketResponse = client.createBucket(request.build()).get(30, TimeUnit.SECONDS);
+            var createBucketResponse = client.createBucket(
+                    bucketBuilder -> bucketBuilder.bucket(bucketName)
+                            .acl(envMap.getOrDefault("acl", "").toString())
+                            .grantFullControl(envMap.getOrDefault("grantFullControl", "").toString())
+                            .grantRead(envMap.getOrDefault("grantRead", "").toString())
+                            .grantReadACP(envMap.getOrDefault("grantReadACP", "").toString())
+                            .grantWrite(envMap.getOrDefault("grantWrite", "").toString())
+                            .grantWriteACP(envMap.getOrDefault("grantWriteACP", "").toString())
+                            .createBucketConfiguration(confBuilder -> {
+                                if (envMap.containsKey("locationConstraint")) {
+                                    String loc = envMap.get("locationConstraint").toString();
+                                    if (loc.equals(Region.US_EAST_1.id())) {
+                                        loc = null; // us-east-1 is the default (null) location for S3
+                                    }
+                                    confBuilder.locationConstraint(loc);
+                                }
+                            })
+            ).get(30, TimeUnit.SECONDS);
             logger.debug("Create bucket response {}", createBucketResponse.toString());
 
         } catch (ExecutionException e) {
