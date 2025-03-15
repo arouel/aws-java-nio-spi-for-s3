@@ -31,7 +31,7 @@ abstract class Containers {
     static {
         LOCAL_STACK_CONTAINER = new LocalStackContainer(
             DockerImageName.parse("localstack/localstack:4.2")
-        ).withServices(S3);
+        ).withServices(S3).withEnv("LS_LOG", "trace");
         LOCAL_STACK_CONTAINER.start();
         System.setProperty(S3_SPI_ENDPOINT_PROTOCOL_PROPERTY, "http");
     }
