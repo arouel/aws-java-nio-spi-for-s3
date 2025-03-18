@@ -34,8 +34,8 @@ public class S3ClientProvider {
      */
     protected S3CrtAsyncClientBuilder asyncClientBuilder =
             S3AsyncClient.crtBuilder()
-                    .crossRegionAccessEnabled(true);
-
+                    .crossRegionAccessEnabled(true)
+                    .retryConfiguration(b -> b.numRetries(3));
 
     private final Cache<String, CacheableS3Client> bucketClientCache = Caffeine.newBuilder()
             .maximumSize(4)
