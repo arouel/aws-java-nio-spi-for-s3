@@ -13,7 +13,9 @@ import static software.amazon.nio.spi.s3.Containers.*;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.ByteBuffer;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -33,6 +35,88 @@ public class FilesNewByteChannelTest {
         Containers.createBucket(bucketName);
         // reset time to scope the log entries for each test case
         assertThat(Containers.getLoggedS3HttpRequests()).contains("CreateBucket => 200");
+    }
+
+    @Test
+    @DisplayName("newByteChannel with CREATE_NEW, WRITE, APPEND throws S3TransferException on failing write")
+    public void newByteChannel_APPEND___CREATE_NEW_WRITE_fails() throws IOException {
+        var path = Paths.get(URI.create(localStackConnectionEndpoint() + "/" + bucketName + "/bc-append-cnw-test.txt"));
+        try (var channel = Files.newByteChannel(path, CREATE_NEW, WRITE, APPEND)) {
+            Containers.deleteBucket(bucketName);
+
+            assertThatThrownBy(() -> channel.write(ByteBuffer.wrap("abc".getBytes())))
+                .isInstanceOf(S3TransferException.class)
+                .hasMessage("PutObject => 404; /bc-append-cnw-test.txt; The specified bucket does not exist");
+        }
+    }
+
+    @Test
+    @DisplayName("newByteChannel with CREATE_NEW, WRITE, APPEND creates a new S3 object if not exists")
+    public void newByteChannel_APPEND___CREATE_NEW_WRITE_succeeds() throws IOException {
+        var path = Paths.get(URI.create(localStackConnectionEndpoint() + "/" + bucketName + "/bc-append-cnw-test.txt"));
+        try (var channel = Files.newByteChannel(path, CREATE_NEW, WRITE, APPEND)) {
+            channel.write(ByteBuffer.wrap("abc".getBytes()));
+        }
+        assertThat(path).hasContent("abc");
+    }
+
+    @Test
+    @DisplayName("newByteChannel with CREATE_NEW, WRITE, APPEND throws an exception when the object exists")
+    public void newByteChannel_APPEND___CREATE_NEW_WRITE_throwsWhenExists() throws IOException {
+        var path = putObject(bucketName, "bc-append-cnw-test.txt", "abc");
+
+        assertThatThrownBy(() -> Files.newByteChannel(path, CREATE_NEW, WRITE, APPEND))
+            .isInstanceOf(FileAlreadyExistsException.class)
+            .hasMessage(path.toString());
+    }
+
+    @Test
+    @DisplayName("newByteChannel with CREATE, WRITE, APPEND appends to an empty S3 object")
+    public void newByteChannel_APPEND___CREATE_WRITE_existsAndEmpty() throws IOException {
+        var path = putObject(bucketName, "bc-append-cw-test.txt");
+
+        try (var channel = Files.newByteChannel(path, CREATE, WRITE, APPEND)) {
+            // LocalStack 4.2 does not support PutObject with 'x-amz-write-offset-bytes' header
+            assertThat(channel.write(ByteBuffer.wrap("def".getBytes()))).isEqualTo(3);
+        }
+
+        assertThat(path).hasContent("def");
+        // LocalStack 4.2 does not support PutObject with 'x-amz-write-offset-bytes' header
+        // assertThat(path).hasContent("abcdef");
+    }
+
+    @Test
+    @DisplayName("newByteChannel with CREATE, WRITE, APPEND creates a new S3 object if not exists")
+    public void newByteChannel_APPEND___CREATE_WRITE_notExists() throws IOException {
+        var path = Paths.get(URI.create(localStackConnectionEndpoint() + "/" + bucketName + "/bc-cwa-test.txt"));
+
+        try (var channel = Files.newByteChannel(path, CREATE, WRITE, APPEND)) {
+            assertThat(channel.write(ByteBuffer.wrap("abc".getBytes()))).isEqualTo(3);
+            // LocalStack 4.2 does not support PutObject with 'x-amz-write-offset-bytes' header
+            // assertThat(channel.write(ByteBuffer.wrap("def".getBytes()))).isEqualTo(6);
+        }
+
+        assertThat(path).hasContent("abc");
+        // LocalStack 4.2 does not support PutObject with 'x-amz-write-offset-bytes' header
+        // assertThat(path).hasContent("abcdef");
+    }
+
+    @Test
+    @DisplayName("newByteChannel with WRITE, APPEND succeeds when the S3 object exists")
+    public void newByteChannel_APPEND___WRITE_succeeds() throws IOException {
+        var path = putObject(bucketName, "bc-append-w-test.txt", "abc");
+
+        assertThatCode(() -> Files.newByteChannel(path, WRITE, APPEND)).doesNotThrowAnyException();
+    }
+
+    @Test
+    @DisplayName("newByteChannel with WRITE, APPEND throws when the S3 object not exists")
+    public void newByteChannel_APPEND___WRITE_throws() throws IOException {
+        var path = Paths.get(URI.create(localStackConnectionEndpoint() + "/" + bucketName + "/bc-append-w-test.txt"));
+
+        assertThatThrownBy(() -> Files.newByteChannel(path, WRITE, APPEND))
+            .isInstanceOf(NoSuchFileException.class)
+            .hasMessage(path.toString());
     }
 
     @Test

@@ -30,6 +30,7 @@ class S3SeekableByteChannel implements SeekableByteChannel {
     private final Set<? extends OpenOption> options;
     private long position;
     private final S3Path path;
+    private final S3AppendableByteChannel appendDelegate;
     private final ReadableByteChannel readDelegate;
     private final S3WritableByteChannel writeDelegate;
 
@@ -63,14 +64,21 @@ class S3SeekableByteChannel implements SeekableByteChannel {
         }
 
         var config = s3Path.getFileSystem().getConfiguration();
-        if (options.contains(StandardOpenOption.WRITE)) {
+        if (options.contains(StandardOpenOption.WRITE) && options.contains(StandardOpenOption.APPEND)) {
+            LOGGER.debug("using S3AppendableByteChannel as append delegate for path '{}'", s3Path.toUri());
+            appendDelegate = new S3AppendableByteChannel(s3Path, s3Client, options);
+            readDelegate = null;
+            writeDelegate = null;
+        } else if (options.contains(StandardOpenOption.WRITE)) {
             LOGGER.debug("using S3WritableByteChannel as write delegate for path '{}'", s3Path.toUri());
+            appendDelegate = null;
             readDelegate = null;
             var transferUtil = new S3TransferUtil(s3Client, timeout, timeUnit);
             writeDelegate = new S3WritableByteChannel(s3Path, s3Client, transferUtil, options);
             position = 0L;
         } else if (options.contains(StandardOpenOption.READ) || S3OpenOption.exclude(options).isEmpty()) {
             LOGGER.debug("using S3ReadAheadByteChannel as read delegate for path '{}'", s3Path.toUri());
+            appendDelegate = null;
             readDelegate =
                 new S3ReadAheadByteChannel(s3Path, config.getMaxFragmentSize(), config.getMaxFragmentNumber(), s3Client, this,
                     timeout, timeUnit);
@@ -124,6 +132,10 @@ class S3SeekableByteChannel implements SeekableByteChannel {
     public int write(ByteBuffer src) throws IOException {
         validateOpen();
 
+        if (appendDelegate != null) {
+            return appendDelegate.write(src);
+        }
+
         if (writeDelegate == null) {
             throw new NonWritableChannelException();
         }
@@ -141,6 +153,10 @@ class S3SeekableByteChannel implements SeekableByteChannel {
     @Override
     public long position() throws IOException {
         validateOpen();
+
+        if (appendDelegate != null) {
+            return appendDelegate.size();
+        }
 
         if (writeDelegate != null) {
             return writeDelegate.position();
@@ -184,6 +200,10 @@ class S3SeekableByteChannel implements SeekableByteChannel {
             throw new ClosedChannelException();
         }
 
+        if (appendDelegate != null) {
+            throw new UnsupportedOperationException("unsupported in APPEND mode");
+        }
+
         if (writeDelegate != null) {
             writeDelegate.position(newPosition);
             return this;
@@ -209,6 +229,10 @@ class S3SeekableByteChannel implements SeekableByteChannel {
     @Override
     public long size() throws IOException {
         validateOpen();
+
+        if (appendDelegate != null) {
+            return appendDelegate.size();
+        }
 
         if (writeDelegate != null) {
             return writeDelegate.size();

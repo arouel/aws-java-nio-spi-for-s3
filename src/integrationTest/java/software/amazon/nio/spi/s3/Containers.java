@@ -70,6 +70,14 @@ abstract class Containers {
          .doesNotThrowAnyException();
     }
 
+    public static void deleteBucket(String name) {
+        assertThatCode(() -> {
+            var execResult = LOCAL_STACK_CONTAINER.execInContainer(("awslocal s3api delete-bucket --bucket " + name).split(" "));
+            assertThat(execResult.getExitCode()).isZero();
+        }).as("Failed to delete bucket '%s'", name)
+            .doesNotThrowAnyException();
+    }
+
     public static Path putObject(String bucket, String key) {
         assertThatCode(() -> {
             var execResult = LOCAL_STACK_CONTAINER.execInContainer(("awslocal s3api put-object --bucket " + bucket + " --key " + key).split(" "));
